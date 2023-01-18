@@ -109,7 +109,7 @@ body {
   font-size: 0.6rem;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 0px) and (max-width: 375px) {
   .container {
     display: block;
     background-repeat: repeat-y;
