@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+.redRight {
+  font-weight: bold;
+  color: hsl(0, 100%, 74%);
+  font-size: 0.6rem;
+}
+.errArea {
+  position: relative;
+}
+.errSpan {
+  font-weight: bold;
+  color: hsl(0, 100%, 74%);
+  font-size: 0.6rem;
+  position: absolute;
+  top: 80px;
+  right: 25px;
+  width: 150px;
+  display: none;
+}
+.errImg {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background-image: url("./images/bg-intro-desktop.png");
+  background-size: auto;
+  height: 100vh;
+  background-color: hsl(0, 100%, 74%);
+  display: flex;
+}
+
+.container section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.container #articleArea {
+  padding: 20px 0 20px 0;
+}
+.container section #title {
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 50px;
+}
+
+.container section #subTitle {
+  margin-top: 40px;
+  font-weight: 400;
+}
+
+.container section #loginArea {
+  width: 80%;
+  box-shadow: 0px 10px 5px 0 rgba(102, 102, 102, 0.5);
+}
+
+.container section div {
+  width: 70%;
+  border-radius: 5px;
+  text-align: center;
+  padding: 15px 0;
+}
+.container section #payment {
+  background-color: hsl(248, 32%, 49%);
+}
+.container section #loginForm {
+  margin-top: 20px;
+  background-color: aliceblue;
+}
+
+.container section #loginForm div {
+  width: 100%;
+  margin: 0 auto;
+}
+.container section #loginForm input {
+  position: relative;
+  width: 90%;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.container section #loginForm :nth-child(5) {
+  background-color: hsl(154, 59%, 51%);
+  color: aliceblue;
+  border: 2px solid hsl(154, 56%, 42%);
+}
+
+.container section #loginForm p {
+  color: black;
+  font-size: 0.6rem;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    display: block;
+    background-repeat: repeat-y;
+    height: 100vh;
+  }
+  .container section {
+    width: 100%;
+  }
+  .container section #title {
+    margin-top: 50px;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+  .container section #subTitle {
+    width: 80%;
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+  .container section #loginArea {
+    width: 90%;
+  }
+  .container section div {
+    padding: 10px 0;
+    width: 90%;
+  }
+  .container section #loginForm {
+    margin-top: 0px;
+  }
+  .container section #loginForm p {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .container section #loginForm input {
+    margin-top: 0px;
+  }
+  .container section #payment {
+    width: 80%;
+  }
+  .errArea {
+    padding: 0;
+  }
+  .errSpan {
+    top: 55px;
+    right: 15px;
+  }
+  .errImg {
+    top: 20px;
+    right: 25px;
+  }
+  .container section #loginForm :nth-child(5) {
+    margin-top: 10px;
+  }
+}

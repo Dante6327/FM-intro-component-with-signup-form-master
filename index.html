@@ -1,34 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
+    <link rel="stylesheet" href="style.css" />
     <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rowdies&family=Spline+Sans+Mono&display=swap"
+      rel="stylesheet"
     />
-
     <title>Frontend Mentor | Intro component with sign up form</title>
   </head>
   <body>
-    Learn to code by watching others See how experienced developers solve
-    problems in real-time. Watching scripted tutorials is great, but
-    understanding how developers think is invaluable. Try it free 7 days then
-    $20/mo. thereafter First Name Last Name Email Address Password Claim your
-    free trial By clicking the button, you are agreeing to our Terms and
-    Services
+    <div class="container">
+      <section id="articleArea">
+        <div id="title">Learn to code by watching others</div>
+        <div id="subTitle">
+          see how experienced developers solve problems in real-time. Watcing
+          scripted tutorials is great, but understanding how developers think is
+          invauable.
+        </div>
+      </section>
+      <section id="loginArea">
+        <div id="payment"><b>Try it free 7days</b> then $20/mo.thereafter</div>
+        <div id="loginForm">
+          <div class="errArea">
+            <input type="text" id="firstNm" placeholder="First Name" />
+            <img
+              src="./images/icon-error.svg"
+              alt=""
+              class="errImg"
+              id="errFirstNm"
+            />
+            <span class="errSpan" id="errFirstSpan" style="position: absolute"
+              >First Name cannot be empty</span
+            >
+          </div>
 
-    <footer>
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </p>
-    </footer>
+          <div class="errArea">
+            <input type="text" id="lastNm" placeholder="Last Name" />
+            <img
+              src="./images/icon-error.svg"
+              alt=""
+              class="errImg"
+              id="errLastNm"
+            />
+            <span class="errSpan" id="errLastSpan" style="position: absolute"
+              >Last Name cannot be empty</span
+            >
+          </div>
+          <div class="errArea">
+            <input type="text" id="email" placeholder="Email Address" />
+            <img
+              src="./images/icon-error.svg"
+              alt=""
+              class="errImg"
+              id="errEmail"
+            />
+            <span class="errSpan" id="errEmailSpan" style="position: absolute"
+              >Looks like this is not an email</span
+            >
+          </div>
+          <div class="errArea">
+            <input type="password" id="password" placeholder="Password" />
+            <img
+              src="./images/icon-error.svg"
+              alt=""
+              class="errImg"
+              id="errPassword"
+            />
+            <span
+              class="errSpan"
+              id="errPasswordSpan"
+              style="position: absolute"
+              >Password can not be empty</span
+            >
+          </div>
+
+          <input
+            type="button"
+            value="CLAIM YOUR FREE TRAIL"
+            onClick="login()"
+          />
+          <p>
+            By clicking the button. you are agreeing to our&nbsp;<span
+              class="redRight"
+              >Terms and Services</span
+            >
+          </p>
+        </div>
+      </section>
+    </div>
   </body>
+  <script src="index.js"></script>
 </html>
