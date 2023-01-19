@@ -3,7 +3,7 @@ function login() {
   const lastNm = document.getElementById("lastNm").value;
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
-
+  let isLogin = false;
   !firstNm
     ? ((document.querySelector("#errFirstNm").style.display = "block"),
       (document.querySelector("#errFirstSpan").style.display = "block"))
@@ -25,4 +25,16 @@ function login() {
       (document.querySelector("#errEmailSpan").style.display = "block"))
     : ((document.querySelector("#errEmail").style.display = "none"),
       (document.querySelector("#errEmailSpan").style.display = "none"));
+  if (
+    firstNm &&
+    lastNm &&
+    password &&
+    email.indexOf(".") !== -1 &&
+    email.indexOf("@") !== -1
+  ) {
+    document.querySelector("#firstNm").style.borderColor = "green";
+    document.querySelector("#lastNm").style.borderColor = "green";
+    document.querySelector("#email").style.borderColor = "green";
+    document.querySelector("#password").style.borderColor = "green";
+  }
 }
